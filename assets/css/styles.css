@@ -16660,6 +16660,40 @@ textarea.form-control-lg {
   text-transform: uppercase;
   font-weight: 500;
 }
+.services-tab .service-nav-item {
+  transition: background-color 0.35s ease;
+}
+.services-tab .service-description {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.35s ease, transform 0.35s ease;
+}
+.services-tab .service-nav-item.active .service-description {
+  color: var(--bs-primary) !important;
+  /* transform: translateX(8px); */
+}
+.services-tab .tab-content {
+  overflow: hidden;
+  border-radius: 20px;
+}
+.services-tab .tab-pane.fade {
+  transform: translateY(18px) scale(0.98);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.services-tab .tab-pane.fade.show {
+  transform: translateY(0) scale(1);
+}
+.services-tab .service-image {
+  display: block;
+  transition: transform 0.55s ease, filter 0.55s ease;
+}
+.services-tab .tab-pane.fade:not(.show) .service-image {
+  transform: scale(0.94);
+  filter: blur(6px);
+}
+.services-tab .tab-pane.fade.show .service-image {
+  transform: scale(1);
+  filter: blur(0);
+}
 .services-tab .nav-tabs .nav-item .nav-link.active {
   background-color: transparent;
   color: var(--bs-primary);
